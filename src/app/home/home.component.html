@@ -1,0 +1,23 @@
+<div class="container align-self-center" id="ct1">
+  <div class="row">
+      <div class="col-sm-6">
+          <div id="test">
+              <span><img id="img2" src="assets/images/mining.svg" alt="techfeed360"><br></span>
+              <span id="itext">Aspect Based Sentiment Analysis on Amazon Reviews</span>
+          </div>
+      </div>
+        <div class="col-sm-1">
+        </div>
+      <div class="col-sm-5">
+          <div id="lhead">
+              Analyse
+          </div>
+          <br>
+          <br>
+          <label id="login1" >Enter the Url</label>
+          <p><input class="form1" id="e1" type="text" [(ngModel)]="url" onKeyup="checkform()"></p>
+          <br>
+          <button id="lbtn" type="button" class="btn btn-default" (click)="getUrl()" disabled="disabled">Analyse Now</button>
+      </div>
+  </div>
+</div>

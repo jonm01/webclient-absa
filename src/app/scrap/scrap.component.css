@@ -1,0 +1,12 @@
+td {
+    vertical-align: top;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#spin{
+    margin: 0 auto;
+    align-content: center;
+    font-size: calc((55*var(--fz))/100);
+}

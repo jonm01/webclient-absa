@@ -1,0 +1,26 @@
+td {
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+th{
+    text-align: center;
+    font-size: calc((35*var(--fz))/100);
+}
+table {
+    margin: 0 auto;
+}
+#r1{
+    margin: 0 auto;
+}
+#hh2{
+    margin: 0 auto;
+    align-content: center;
+    font-size: calc((48*var(--fz))/100);
+}
+#spin{
+    margin: 0 auto;
+    align-content: center;
+    font-size: calc((55*var(--fz))/100);
+}

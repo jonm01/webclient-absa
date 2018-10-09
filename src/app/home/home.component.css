@@ -1,0 +1,26 @@
+#img2{
+    height: 170px;
+    margin: 20px;
+}
+#itext{
+    font-size: calc((55*var(--fz))/100);
+}
+#lhead{
+    font-size: calc((60*var(--fz))/100);
+}
+#lbtn{
+    padding-left: 50px;
+    padding-right:50px;
+    border-radius: 3px;
+    border-color: #1A73E8;
+    font-size: 18px;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+label{
+    font-size: 18px;
+}
+  
+#e1,#p1{
+    background-color: white !important;
+}

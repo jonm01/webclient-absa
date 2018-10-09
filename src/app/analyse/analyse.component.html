@@ -1,0 +1,124 @@
+
+
+<div class="container align-self-center">
+    <div class='row' *ngIf="response==null" >
+        <span id="spin"><i class="fa fa-circle-o-notch fa-spin" style="padding:10px;"></i>Analysing Reviews...</span>
+    </div>
+    <div class="row" *ngIf="response!=null"><span id="hh2">Mined Opinion</span></div>
+    <hr *ngIf="response!=null">
+    <div class='row' id="r1" *ngIf="response!=null"> 
+          <table>
+            <tr><th>Aspect</th><th colspan="3">Polarity</th></tr>
+              <tr *ngFor="let key of keys"> 
+                <td><h4><b>{{key}}:</b></h4></td>
+                <td>
+                  <div class="c100 p{{response[key].percent[0]}} small green" >
+                    <span data-toggle="modal" [attr.data-target]="'#'+ key+'p'">{{response[key].percent[0]}}</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="c100 p{{response[key].percent[1]}} small red" >
+                    <span data-toggle="modal" [attr.data-target]="'#'+ key+'neg'">{{response[key].percent[1]}}</span>
+                    <div class="slice">
+                        <div class="bar"></div>
+                        <div class="fill"></div>
+                    </div>
+                  </div>
+                </td>
+                <td>
+                  <div class="c100 p{{response[key].percent[2]}} small grey">
+                    <span data-toggle="modal" [attr.data-target]="'#'+ key+'n'">{{response[key].percent[2]}}</span>
+                    <div class="slice">
+                      <div class="bar"></div>
+                      <div class="fill"></div>
+                    </div>
+                  </div>
+                </td>
+              </tr>
+          </table>
+    </div>
+
+
+
+
+    <!-- Modal -->
+  <div *ngFor="let key of keys">
+    <!-- positive -->
+      <div class="modal fade bd-example-modal-lg" id="{{key}}p" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">Positive Opinions</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                  <ul class="list-group">
+                      <li class="list-group-item list-group-item-success" *ngFor="let op of response[key].positive">{{op}}</li>
+                  </ul>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+<!-- negative -->
+        <div class="modal fade bd-example-modal-lg" id="{{key}}neg" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Negative Opinions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-danger" *ngFor="let op of response[key].negative">{{op}}</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+  <!-- neutral -->
+        <div class="modal fade bd-example-modal-lg" id="{{key}}n" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Neutral Opinions</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <ul class="list-group">
+                        <li class="list-group-item" *ngFor="let op of response[key].neutral">{{op}}</li>
+                    </ul>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+  </div>
+
+<!-- Modal -->
+
+
+
+</div>
+
+
+
+    

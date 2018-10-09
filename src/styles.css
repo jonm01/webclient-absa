@@ -1,1 +1,115 @@
-/* You can add global styles to this file, and also import other style files */
+body, html {
+    height: 100%;
+}
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 200;
+    color: black;
+    background-color: white;
+}
+:root{
+    --fz: 4.5vw;
+}
+  
+#logo1 {
+    height: calc((83*var(--fz))/100) !important;
+    vertical-align: text-bottom !important;
+}
+#lheader{
+    font-size: var(--fz);
+    font-weight: 300 !important;
+}
+#test{
+    text-align: center;
+}
+
+  
+.form1{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 8px;
+    width: 100%;
+    transition: border-bottom 1s;
+ }
+  
+.form1:focus{
+    outline: none;
+}
+
+#lbtn2{
+    padding-left: 50px;
+    padding-right:50px;
+    border-radius: 3px;
+    border-color: #1A73E8;
+    font-size: 18px;
+    background-color: white;
+    transition-duration: 0.5s;
+}
+#lbtn2:hover{
+    background-color: #1A73E8;
+    color: white;
+    font-weight: 400;
+}
+  
+  
+
+  
+#ft {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+#ftt{
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+}
+  
+@media (max-width:379px) {
+    #ftt{
+      font-size: 14.5px !important;
+    }
+    #test{
+      display:none;
+    }
+  
+    :root{
+      --fz: 11.8vw !important;
+    }
+}
+  
+@media (min-width:380px) and (max-width: 575px) {
+  
+    #ftt{
+      font-size: 14.5px !important;
+    }
+    #test{
+        display:none;
+    }
+    :root{
+        --fz: 9.8vw !important;
+    }
+}
+
+@media (min-width:575px) and (max-width: 850px) {
+    #ftt{
+      font-size: 14.5px !important;
+    }
+    :root{
+      --fz: 5.3vw !important;
+    }
+}
+ 
+@media (min-width:1200px) {
+      .container{
+        min-width: 80% !important;
+        margin-right: 10% !important;
+        margin-left: 10% !important;
+      }
+}
+  
